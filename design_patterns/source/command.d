@@ -287,6 +287,8 @@ public:
 				ceilingFan.ultra();
 				writefln("Ceiling fan in %s is danger for you", ceilingFan.getLocation());
 				break;
+            default:
+                break;
 		}
 	}
 }
@@ -336,6 +338,8 @@ public:
 				ceilingFan.ultra();
 				writefln("Ceiling fan in %s is danger for you", ceilingFan.getLocation());
 				break;
+            default:
+                break;
 		}
 	}
 }

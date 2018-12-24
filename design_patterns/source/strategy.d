@@ -133,7 +133,7 @@ class MallardDuck : Duck
 		flyBehavior = new FlyWithWings();
 	}
 
-	void swim()
+	override void swim()
 	{
 		writeln("I swim in sea");
 	}
@@ -149,7 +149,7 @@ class RubberDuck : Duck
 		flyBehavior = new FlyNoWay();
 	}
 
-	void swim()
+	override void swim()
 	{
 		writeln("I swim in bathroom");
 	}

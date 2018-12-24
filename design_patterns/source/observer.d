@@ -94,7 +94,7 @@ public:
 				observer.update(temperature, humidity, pressure);
 			}
 		}
-		catch
+		catch (Throwable)
 		{
 
 		}

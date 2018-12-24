@@ -45,7 +45,7 @@ public abstract class PizzaStore
 // нью-йоркская пиццерия
 public class NYPizzaStore : PizzaStore
 {
-	Pizza createPizza(string item)
+	override Pizza createPizza(string item)
 	{
 		switch(item)
 		{
@@ -67,7 +67,7 @@ public class NYPizzaStore : PizzaStore
 // чикагская пиццерия
 public class ChicagoPizzaStore : PizzaStore
 {
-	Pizza createPizza(string item)
+	override Pizza createPizza(string item)
 	{
 		switch(item)
 		{
@@ -111,7 +111,7 @@ public:
 				writeln("    " ~ topping);
 			}
 		}
-		catch
+		catch (Throwable)
 		{
 
 		}
@@ -172,7 +172,7 @@ public class ChicagoStyleCheesePizza : Pizza
 	}
 
 	// в Чикаго пиццу нарезают квадратиками
-	void cut()
+	override void cut()
 	{
 		writeln("Cutting the pizza into square slices");
 	}
