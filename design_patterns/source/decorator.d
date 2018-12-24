@@ -39,7 +39,7 @@ public abstract class Beverage
 // опциональные дополнения к напитку
 public abstract class CondimentDecorator : Beverage
 {
-	public abstract string getDescription();
+	public override abstract string getDescription();
 }
 
 
@@ -51,7 +51,7 @@ public class Espresso : Beverage
 		description = "Espresso";
 	}
 
-	public double cost()
+	public override double cost()
 	{
 		return 1.99;
 	}
@@ -66,7 +66,7 @@ public class HouseBlend : Beverage
 		description = "House Blend Coffee";
 	}
 	
-	public double cost()
+	public override double cost()
 	{
 		return .89;
 	}
@@ -81,7 +81,7 @@ public class DarkRoast : Beverage
 		description = "Dark Roast Coffee";
 	}
 	
-	public double cost()
+	public override double cost()
 	{
 		return .99;
 	}
@@ -96,7 +96,7 @@ public class Decaf : Beverage
 		description = "Coffee without Caffeine";
 	}
 	
-	public double cost()
+	public override double cost()
 	{
 		return 1.05;
 	}
@@ -113,13 +113,13 @@ public class Mocha : CondimentDecorator
 		this.beverage = beverage;
 	}
 
-	public string getDescription()
+	public override string getDescription()
 	{
 		return beverage.getDescription() ~ ", Mocha";
 	}
 
 	
-	public double cost()
+	public override double cost()
 	{
 		return beverage.cost() + 0.20;
 	}
@@ -136,12 +136,12 @@ public class Soy : CondimentDecorator
 		this.beverage = beverage;
 	}
 	
-	public string getDescription()
+	public override string getDescription()
 	{
 		return beverage.getDescription() ~ ", Soy";
 	}
 	
-	public double cost()
+	public override double cost()
 	{
 		return beverage.cost() + .15;
 	}
@@ -158,13 +158,13 @@ public class Whip : CondimentDecorator
 		this.beverage = beverage;
 	}
 	
-	public string getDescription()
+	public override string getDescription()
 	{
 		return beverage.getDescription() ~ ", Whip";
 	}
 	
 	
-	public double cost()
+	public override double cost()
 	{
 		return beverage.cost() + .10;
 	}
