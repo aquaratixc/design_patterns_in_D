@@ -134,7 +134,7 @@ public:
 		this.ingredientFactory = ingredientFactory;
 	}
 
-	void prepare()
+	override void prepare()
 	{
 		writeln("Preparing " ~ name);
 		dough = ingredientFactory.createDough();
@@ -156,7 +156,7 @@ public:
 		this.ingredientFactory = ingredientFactory;
 	}
 	
-	void prepare()
+	override void prepare()
 	{
 		writeln("Preparing " ~ name);
 		dough = ingredientFactory.createDough();
@@ -191,7 +191,7 @@ public abstract class PizzaStore
 // нью-йоркская пиццерия
 public class NYPizzaStore : PizzaStore
 {
-	protected Pizza createPizza(string item)
+	override protected Pizza createPizza(string item)
 	{
 		Pizza pizza = null;
 		PizzaIngredientFactory ingredientFactory = new NYPizzaIngredientFactory(); 
@@ -218,7 +218,7 @@ public class NYPizzaStore : PizzaStore
 // чикагская пиццерия
 public class ChicagoPizzaStore : PizzaStore
 {
-	protected Pizza createPizza(string item)
+	override protected Pizza createPizza(string item)
 	{
 		Pizza pizza = null;
 		PizzaIngredientFactory ingredientFactory = new ChicagoPizzaIngredientFactory(); 
