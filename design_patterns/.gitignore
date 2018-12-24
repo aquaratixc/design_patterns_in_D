@@ -1,0 +1,14 @@
+.dub
+docs.json
+__dummy.html
+docs/
+design_patterns.so
+design_patterns.dylib
+design_patterns.dll
+design_patterns.a
+design_patterns.lib
+design_patterns-test-*
+*.exe
+*.o
+*.obj
+*.lst

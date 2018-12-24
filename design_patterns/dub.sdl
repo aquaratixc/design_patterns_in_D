@@ -1,0 +1,5 @@
+name "design_patterns"
+description "Example implementation of design patterns in D"
+authors "Oleg Bakharev"
+copyright "Copyright © 2018, Oleg Bakharev"
+license "ESL 1.0"
